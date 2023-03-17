@@ -1,0 +1,19 @@
+{
+    "name": "vender/name",
+    "autoload": {
+        "psr-4": {
+            "Vender\\Name\\": "src/",
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thuyhang",
+            "email": "1951060690@e.tlu.edu.vn"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "twig/twig": "^3.5"
+    }
+}

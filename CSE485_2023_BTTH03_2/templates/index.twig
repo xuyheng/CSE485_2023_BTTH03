@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+</head>
+<body>
+<ul>
+<table>
+    <thead>
+    <tr>
+      <th>user_id</th>
+      <th>user_email</th>
+      <th>user_pass</th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   {% for item in users %}
+    <tr>
+      <td>{{item.user_id}}</td>
+      <td>{{item.user_email}}</td>
+      <td>{{item.user_pass}}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+</ul>
+        
+        
+</body>
+</html> 
