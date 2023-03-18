@@ -1,0 +1,23 @@
+{% extends 'home/base.html.twig' %}
+
+{% block content %}
+        <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
+           {% for article in findArticle %}
+                <div class="row mb-5">
+                    <div class="col-sm-4">
+                        <img src="/CSE485_2023_BTTH03/bai_3/views/image/songs/{{article.image}}" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-sm-8">
+                        <h5 class="card-title mb-2">
+                            <a href="" class="text-decoration-none">{{article.title}}</a>
+                        </h5>
+                        <p class="card-text"><span class=" fw-bold">Bài hát: </span>{{article.song_name}} </p>
+                        <p class="card-text"><span class=" fw-bold">Thể loại: </span>{{article.cat_name}} </p>
+                        <p class="card-text"><span class=" fw-bold">Tóm tắt: </span>{{article.summary}}</p>
+                        <p class="card-text"><span class=" fw-bold">Nội dung: </span>{{article.content}}</p>
+                        <p class="card-text"><span class=" fw-bold">Tác giả: </span>{{article.author_name}}</p>
+
+                    </div>          
+        </div>
+        {% endfor %}
+ {% endblock %}

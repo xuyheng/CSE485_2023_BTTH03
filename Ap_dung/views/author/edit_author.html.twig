@@ -1,0 +1,32 @@
+{% extends 'admin/base_admin.html.twig' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-sm">
+			<h3 class="text-center text-uppercase fw-bold">Sửa thông tin tác giả</h3>
+			
+				<form action="index.php?controller=author&action=edit" method="post" enctype="multipart/form-data">
+					<div class="input-group mt-3 mb-3">
+						<span class="input-group-text" id="lblTgId">Mã tác giả</span>
+						<input type="text" class="form-control" name="txtAuthorId" id="ma_tgia" value="{{findAuthor.author_id}}" readonly>
+					</div>
+
+					<div class="input-group mt-3 mb-3">
+						<span class="input-group-text" id="lblTgName">Tên tác giả</span>
+						<input type="text" class="form-control" name="txtAuthorName" id="ten_gia" value="{{findAuthor.author_name}}" style="border-top-right-radius: 7px; border-bottom-right-radius:7px">
+					</div>
+
+					<div class="form-group mt-3 mb-3">
+						<label>Hình tác giả</label>
+						<img style="width: 100px;" src="/CSE485_2023_BTTH03/bai_3/views/image/authors/{{findAuthor.author_pic}}">
+						<input type="file" class="form-control" name="txtHinhanhtgia">
+					</div>
+					<div class="form-group  float-end ">
+						<input type="submit" name="save" value="Lưu lại" class="btn btn-success">
+						<a href="index.php?controller=author&action=list" class="btn btn-warning ">Quay lại</a>
+					</div>
+				</form>
+
+		</div>
+	</div>
+{% endblock %}
